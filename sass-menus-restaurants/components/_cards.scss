@@ -1,6 +1,6 @@
 .menu-cards {
     .card-1 {
-      @include flex(column, left, left);
+      @include flex(column, left, stretch);
       width: 100%;
       height: $menu-card-height;
       background-color: $white;
