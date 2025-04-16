@@ -128,7 +128,7 @@ h3 {
   transform: translateY(-50%);
   width: 59px;
   height: 71px;
-  background-image: url("/assets/images/coche.jpg");
+  background-image: url("../assets/images/coche.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: right 0.3s ease-in-out, opacity 0.2s ease-in-out;
