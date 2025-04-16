@@ -1,0 +1,76 @@
+.menu-container {
+    @include flex(column);
+    padding: 0 15px 60px 15px;
+    background: $background-color;
+    margin-top: -57px;
+    border-top-left-radius: $border-radius-xlarge;
+    border-top-right-radius: $border-radius-xlarge;
+    position: relative;
+  }
+  
+  .menu {
+    width: 100%;
+  
+    section {
+      width: 100%;
+      border-radius: $border-radius-small;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+  
+    &-title {
+      @include flex(row, space-between);
+      margin-top: 10px;
+      width: 100%;
+      margin-bottom: -10px;
+    }
+  
+    &-sous-title {
+      border-bottom: 3px solid $accent-green;
+      width: 40px;
+    }
+  
+    &-plats-container {
+      margin-top: 35px;
+    }
+  
+    &-desserts-container {
+      margin-top: 35px;
+      margin-bottom: -30px;
+    }
+  
+    &-price {
+      @include position(absolute, 37px, 15px);
+      font-size: $font-size-small;
+      @include transition(right);
+    }
+  }
+  
+  .order-container {
+    height: 90px;
+    background: $background-color;
+  }
+  
+  @include desktop {
+    .menu-container {
+      justify-content: center;
+      width: 1055px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .menu {
+      width: 634px;
+    }
+  
+    .order-container {
+      width: 1085px;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 { 
+      margin-left: 150px;
+    }
+  }

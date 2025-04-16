@@ -1,0 +1,73 @@
+.search-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: $bg-search;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    
+    &-container {
+      @include flex-center;
+      background-color: $bg-search;
+      box-shadow: 0px 4px 4px 0px $shadow-color-strong; 
+      position: relative;
+      overflow: hidden; 
+      height: 50px;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px; 
+        background: linear-gradient(to bottom, $shadow-color-strong, rgba(0, 0, 0, 0));
+        z-index: 1;
+        pointer-events: none; 
+      }
+      
+      @include desktop {
+        box-shadow: none;
+        
+        &::before {
+          background: none;        
+        }
+      }
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      background-color: $bg-search;
+      
+      &::placeholder {
+        color: black;
+        padding-left: 0px;
+        background-color: $bg-search;
+      }
+    }
+  }
+  
+  .custom-icon {
+    width: 12px;
+    height: 16px;
+  }
+  
+  .icon-location {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;    
+    border: 1px solid var(--main-bg-color);
+    border-radius: 0%;
+    font-weight: bold;
+    margin-right: 0px;
+    color: var(--font-black);
+    background-color: var(--main-bg-color);
+    position: relative;
+    left: 20px;
+    right: 20px;
+  }

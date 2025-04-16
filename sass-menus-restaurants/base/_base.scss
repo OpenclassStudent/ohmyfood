@@ -1,0 +1,39 @@
+* {
+  font-family: $font-family-primary;
+}
+
+:root {
+  --main-color: #{$main-color};
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;    // Limite la largeur maximale
+  margin: 0 auto;       // Centre le body dans la fenêtre
+  width: 100%;
+  
+}
+
+#home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: opacity 0.5s ease-out;
+  
+  &:active {
+    opacity: 0;
+  }
+}
+
+.main-container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+}

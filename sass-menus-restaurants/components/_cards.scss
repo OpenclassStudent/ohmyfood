@@ -1,0 +1,49 @@
+.menu-cards {
+    .card-1 {
+      @include flex(column, left, left);
+      width: 100%;
+      height: $menu-card-height;
+      background-color: $white;
+      border-radius: $border-radius-medium;
+      overflow: hidden;
+      filter: drop-shadow($shadow-light);
+      position: relative;
+      margin-bottom: 10px;
+  
+      &:hover {
+        .menu-price {
+          right: 70px;
+        }
+  
+        &::after {
+          right: 0;
+          opacity: 1;
+        }
+      }
+  
+      &::after {
+        content: '';
+        @include position(absolute, 50%, -30px, null, null);
+        transform: translateY(-50%);
+        width: 59px;
+        height: 71px;
+        background-image: url('/assets/images/coche.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: right 0.3s ease-in-out, opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+    }
+  
+    .card-content {
+      padding: 15px;
+      @include flex(row, space-between);
+      box-sizing: border-box;
+      position: relative;
+      @include text-truncate;
+    }
+  
+    .text-container {
+      flex-grow: 1;
+    }
+  }

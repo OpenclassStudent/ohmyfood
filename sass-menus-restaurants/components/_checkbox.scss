@@ -1,0 +1,50 @@
+// Animation coeur
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
+    font-size: $font-size-xlarge;
+    color: $black;
+    cursor: pointer;
+    @include position(absolute, 195px, 20px);
+  }
+  
+  input[type="checkbox"]:checked + label::before {
+    content: "\f004";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    @include gradient-text($gradient-primary);
+  }
+  
+  .checkbox-container {
+    @include position(absolute, -155px, 20px);
+  }
+  
+  .heart-icon {
+    color: transparent;
+  }
+  
+  // Desktop styles
+  @include desktop {
+    .checkbox-container {
+      position: absolute;
+      top: -155px;
+      right: 380px;
+    }
+  
+    .heart-icon {
+      font-size: $font-size-xlarge;
+      color: $black;
+      cursor: pointer;
+      @include position(absolute, 20px, 20px);
+      transition: color 0.3s;
+  
+      &:hover::before {
+        content: "\f004";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        @include gradient-text($gradient-primary);
+      }
+    }
+  }

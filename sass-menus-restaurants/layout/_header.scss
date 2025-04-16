@@ -1,0 +1,26 @@
+header {
+    @include flex(row, center);
+    width: 100%;
+    height: $header-height;
+  }
+  
+  .logo-container {
+    @include flex;
+  }
+  
+  .logo {
+    width: 197px;
+    height: 36px;
+  }
+  
+  .image-restaurant-container {
+    @include flex;
+    height: $restaurant-image-height;
+    width: 100%;
+  }
+  
+  .image-restaurant {
+    width: 100%;
+    height: $restaurant-image-height;
+    object-fit: cover;
+  }

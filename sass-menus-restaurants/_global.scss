@@ -1,0 +1,93 @@
+// Global file with all variables and mixins
+
+// VARIABLES
+// Couleurs
+$main-color: #E5E5E5;
+$background-color: rgba(246, 246, 246, 1);
+$footer-color: rgba(53, 53, 53, 1);
+$text-color: rgba(53, 53, 53, 1);
+$accent-green: rgba(153, 226, 208, 1);
+$white: white;
+$black: black;
+
+// Dégradés
+$gradient-primary: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+// Typographie
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-logo: 'Shrikhand', sans-serif;
+
+// Tailles de texte
+$font-size-small: 15px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-xlarge: 22px;
+$font-size-xxlarge: 28px;
+
+// Poids de police
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+// Border radius
+$border-radius-small: 15px;
+$border-radius-medium: 20px;
+$border-radius-large: 25px;
+$border-radius-xlarge: 45px;
+
+// Ombres
+$shadow-light: 0px 3px 15px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$breakpoint-desktop: 1024px;
+
+// Dimensions
+$header-height: 63px;
+$restaurant-image-height: 275px;
+$menu-card-height: 70px;
+$button-width: 186px;
+$button-height: 50px;
+
+
+// MIXINS
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}
+
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

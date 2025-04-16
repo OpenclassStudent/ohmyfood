@@ -1,0 +1,39 @@
+.reservation-container {
+    height: 250px;
+    background-color: $bg-light;
+    margin-top: -12px;
+    
+    @include desktop {
+      margin-top: -27px;
+    }
+  }
+  
+  .titre-principal {    
+    height: 40px; 
+    @include flex-column;
+    padding-top: 40px;
+
+    @include desktop {
+      font-size: 40px;
+    }
+  }
+  
+  .sous-titre {    
+    height: 40px; 
+    @include flex-column;
+    padding-top: 55px;
+
+    @include desktop {
+      margin-top: 15px;
+    }
+  }
+  
+  .explorer-restaurants {
+    height: 40px;
+    @include flex-center;
+    padding-top: 15px;
+    
+    @include desktop {
+      padding-top: 0px;
+    }
+  }

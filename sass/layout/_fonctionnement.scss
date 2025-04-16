@@ -1,0 +1,60 @@
+.fonctionnement {
+    &-container {
+      width: 100%; 
+      max-width: 375px; 
+      height: auto; 
+      margin: 0 auto; 
+      text-align: left;
+      position: relative;
+      margin-top: 100px;
+      margin-bottom: 70px;
+      
+      
+      @include desktop {
+        display: flex; 
+        flex-direction: row; 
+        max-width: 1200px; 
+        min-width: 1200px;
+        margin-bottom: 20px;
+        margin-left: 37px;
+      }
+    }
+    
+    &-title {
+      position: absolute;
+      top: -75px;
+      left: -10px;
+      transform: translateY(20px);
+    }
+  }
+  
+  .icon {
+    font-size: 20px;
+    margin-left: 25px;
+    color: gray;
+    
+    &-1 {
+      margin-right: 32px;
+    }
+    
+    &-2 {
+      margin-right: 27px;
+    }
+    
+    &-3 {
+      color: $loader-border;
+      margin-right: 25px;
+    }
+    
+    &-restaurant {
+      margin-right: 10px; 
+    }
+    
+    &-partenaire {
+      margin-right: 4px; 
+    }
+  }
+  
+  .step:last-child .icon {
+    color: $loader-border;
+  }

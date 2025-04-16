@@ -1,0 +1,40 @@
+// Position
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+  
+  // Transitions
+  @mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+    transition: $property $duration $timing;
+  }
+  
+  // Gradient Text
+  @mixin gradient-text($gradient) {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  // Media Query
+  @mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+  
+  // Box Shadow
+  @mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+  }
+  
+  // Text Overflow
+  @mixin text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
