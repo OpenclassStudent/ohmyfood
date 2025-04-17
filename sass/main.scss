@@ -1,8 +1,6 @@
 @import "utils/variables";
-@import "utils/functions";
 @import "utils/mixins";
 @import "utils/animations";
-@import "utils/helpers";
 
 @import "base/reset";
 @import "base/typography";
@@ -16,9 +14,7 @@
 @import "components/heart";
 
 @import "layout/header";
-@import "layout/nav";
 @import "layout/footer";
-@import "layout/forms";
 @import "layout/reservation";
 @import "layout/fonctionnement";
 @import "layout/restaurants";
