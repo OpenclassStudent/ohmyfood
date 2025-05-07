@@ -3,7 +3,6 @@
 // Bases
 @import 'base/base';
 @import 'base/typography';
-@import 'base/reset';
 
 // Composants
 @import 'components/buttons';
@@ -14,8 +13,6 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/menu';
-@import 'layout/container';
 
 // Utils
 @import 'utils/animations';
-@import 'utils/helpers';
