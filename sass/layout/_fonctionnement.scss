@@ -1,6 +1,6 @@
 .fonctionnement {
     &-container {
-      width: 100%; 
+      width: 90%; 
       max-width: 375px; 
       height: auto; 
       margin: 0 auto; 
@@ -11,19 +11,19 @@
       
       
       @include desktop {
-        display: flex; 
-        flex-direction: row; 
-        max-width: 1200px; 
-        min-width: 1200px;
-        margin-bottom: 20px;
-        margin-left: 37px;
+        display: flex;
+      flex-direction: row;
+      justify-content: space-between; 
+      max-width: 1200px;
+      width: 100%;
+      margin: 100px auto 20px;
       }
     }
     
     &-title {
       position: absolute;
       top: -75px;
-      left: -10px;
+      left: 5px;
       transform: translateY(20px);
     }
   }
